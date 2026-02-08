@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* রিসেট এবং গ্লোবাল স্টাইল */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /*aikane (background: linear-gradient(to bottom, rgba(5,5,5,0.3), rgba(120, 20, 140, 0.4), rgba(5,5,5,1)), 
+                url('https://img.freepik.com/free-vector/abstract-optical-laser-background_23-2148970928.jpg?w=1380&t=st=1707050000~exp=1707050600~hmac=fake_token');*/
+    color: #495057; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+/* লোগো আইকন - নীল শ্যাডো পরিবর্তন করে নিউট্রাল করা হয়েছে */
+.logo-icon {
+    background-color: #4263eb;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-weight: bold;
+    /* এখানে নীল শ্যাডোর বদলে সাধারণ শ্যাডো দেওয়া হলো */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.logo-icon:hover {
+    /* হোভারেও নীল শ্যাডো বাদ দেওয়া হয়েছে */
+    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.2), inset -3px -3px 7px rgba(255, 255, 255, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4263eb;
+    box-shadow: inset 5px 5px 10px #dee2e6, inset -5px -5px 10px #ffffff;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 5px 5px 10px #dee2e6, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    box-shadow: inset 5px 5px 10px #dee2e6, inset -5px -5px 10px #ffffff;
+}
+
+/* সাইনআপ বাটন - নীল শ্যাডো রিমুভ করা হয়েছে */
+.signup-btn {
+    text-decoration: none;
+    background-color: #4263eb;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    /* নীল শ্যাডোর পরিবর্তে সাধারণ ডার্ক শ্যাডো */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.2), inset -3px -3px 7px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Main Content Styles (Neumorphism Card) --- */
+.main-content {
+    padding: 60px 0;
+}
+
+.about-card {
+    /* সাদা ব্যাকগ্রাউন্ডের বদলে বডি কালার ব্যবহার করা হয়েছে ব্লেন্ড করার জন্য */
+    background-color: #f8f9fa; 
+    padding: 50px;
+    border-radius: 20px;
+    /* কার্ডের জন্য বড় সফট শ্যাডো */
+    box-shadow: 10px 10px 30px #dee2e6, -10px -10px 30px #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    border: none; /* আগের বর্ডার রিমুভ */
+}
+
+.about-card h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.about-card p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.about-card section {
+    margin-top: 40px;
+}
+
+.about-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.about-card p strong {
+    font-weight: 600;
+    color: #000000;
+}
+
+.final-motto {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    color: #000000;
+    padding: 20px;
+    /* মটোর জন্য একটি হালকা ইনসেট বক্স */
+    border-radius: 12px;
+    box-shadow: inset 5px 5px 10px #dee2e6, inset -5px -5px 10px #ffffff;
+}
+
+/* --- Footer Styles (Neumorphism) --- */
+.footer {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+        /* ফুটারের উপরে শ্যাডো */
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.03); 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #000000;
+    font-size: 12px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 14px;
+    /* ব্যাকগ্রাউন্ড বডির কালার */
+    background-color: #f8f9fa;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    /* আইকনগুলোতে নিউমরফিজম ইফেক্ট */
+    box-shadow: 5px 5px 10px #dee2e6, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4263eb;
+    /* হোভারে বাটনটি দেবে যাবে (Inset Shadow) */
+    box-shadow: inset 3px 3px 7px #dee2e6, inset -3px -3px 7px #ffffff;
+}
+.hero-section {
+    position: relative; /* খুব গুরুত্বপূর্ণ */
+}
+
+/* Parent container must be relative */
+.hero-section {
+    position: relative;
+    overflow: hidden; /* খুব গুরুত্বপূর্ণ: পেজ বড় হবে না */
+}
+
+/* MAIN BACKGROUND LAYER (page বড় হবে না) */
+.bg-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* সবচেয়ে গুরুত্বপূর্ণ */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* সব background image এর common style */
+.bg-img {
+    position: absolute;
+    width: 600px;   /* default size */
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    transform-origin: center;
+}
+
+/* IMAGE 1 */
+/* .img1 {
+    background-image: url("Vector1.png");
+    top: 10%;
+    bottom: 5%;
+    left: 26%;
+    right: 10%;
+    transform: rotate(0deg) scale(2.3);
+    opacity: 0.1;
+    filter: blur(0px);
+} */
+
+/* IMAGE 2 */
+/* .img2 {
+    background-image: url("Vector2.png");
+    top: 10%;
+    bottom: 5%;
+    left: 30%;
+    right: 10%;
+    transform: rotate(20deg) scale(1.2);
+    opacity: 1;
+    filter: blur(0px);
+} */
+
+/* IMAGE 3 */
+/* .img3 {
+    background-image: url("Vector3.png");
+    top: 10%;
+    bottom: 5%;
+    left: 30%;
+    right: 10%;
+    transform: rotate(-15deg) scale(0.8);
+    opacity: 0.1;
+    filter: blur(0px);
+} */

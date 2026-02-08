@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* নিউমরফিজম এফেক্টের জন্য হালকা ধূসর ব্যাকগ্রাউন্ড */
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-container {
+    /* কার্ডের ব্যাকগ্রাউন্ড বডির সাথে মিলিয়ে দেওয়া হলো */
+    background-color: #f8f9fa;
+    padding: 35px;
+    border-radius: 20px;
+    /* নিউমরফিজম কার্ড শ্যাডো (ভেসে থাকার ইফেক্ট) */
+    box-shadow: 10px 10px 30px #dee2e6, -10px -10px 30px #ffffff;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: none; /* আগের বর্ডার রিমুভ */
+}
+
+.signup-container h2 {
+    color: #343a40;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.name-group {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4263eb; /* আইকনের কালার একটু উজ্জ্বল */
+    z-index: 10;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px 14px 45px;
+    border: none;
+    /* ইনপুটের ব্যাকগ্রাউন্ড বডির মতো */
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #495057;
+    outline: none;
+    /* ইনপুট ফিল্ডের জন্য Inset Shadow (দেবে যাওয়া ইফেক্ট) */
+    box-shadow: inset 5px 5px 10px #dee2e6, inset -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #adb5bd;
+}
+
+.input-group input:focus {
+    /* ফোকাস করলে শ্যাডো এবং টেক্সট শার্প হবে */
+    box-shadow: inset 3px 3px 6px #dee2e6, inset -3px -3px 6px #ffffff;
+    color: #4263eb;
+}
+
+.toggle-password {
+    position: absolute;
+    left: 330px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #4263eb;
+}
+
+.terms-group {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.agree-terms {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+/* কাস্টম চেকবক্স স্টাইল (Neumorphism) */
+.checkbox {
+    appearance: none;
+    min-width: 20px;
+    height: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    /* আনচেক অবস্থায় গর্তের মতো দেখাবে (Inset) */
+    box-shadow: inset 3px 3px 6px #dee2e6, inset -3px -3px 6px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.checkbox:checked {
+    background-color: #4263eb;
+    /* চেক করলে ভেসে উঠবে (Blue Background, Neutral Shadow) */
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+.checkbox:checked::after {
+    content: '\2713';
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.agree-terms a {
+    color: #4263eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.agree-terms a:hover {
+    text-decoration: underline;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    /* বাটনটি নীল রঙের */
+    background-color: #4263eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    /* কিন্তু শ্যাডোটি নিউট্রাল (কালো/ধূসর) */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.signup-btn:hover {
+    /* হোভারে বাটনটি দেবে যাবে (Inset Effect) */
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.1);
+    transform: translateY(1px);
+}
+
+.login-link {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.login-link a {
+    color: #4263eb;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+    text-shadow: 0 0 10px rgba(66, 99, 235, 0.3);
+}
+
+.back-to-home {
+    margin-top: 25px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+    color: #4263eb;
+    /* হোভারে হোম বাটনটি নিউমরফিজম শ্যাডো পাবে */
+    background-color: #f8f9fa;
+    box-shadow: 5px 5px 10px #dee2e6, -5px -5px 10px #ffffff;
+}
