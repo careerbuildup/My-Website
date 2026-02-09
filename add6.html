@@ -543,7 +543,7 @@
         // --------------------
         // Data
         // --------------------
-        let videos = JSON.parse(localStorage.getItem('myVideos_4')) || [];
+        let videos = JSON.parse(localStorage.getItem('myVideos_6')) || [];
 
         // --------------------
         // Init
@@ -732,7 +732,7 @@
         }
 
         function saveAndRender() {
-          localStorage.setItem('myVideos_4', JSON.stringify(videos));
+          localStorage.setItem('myVideos_6', JSON.stringify(videos));
           renderVideos();
         }
 
